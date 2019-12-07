@@ -10,8 +10,7 @@ def lambda_handler(event, context):
     # content_recieved = "show me person and dog."
     print(event)
     content_recieved = event["params"]["querystring"]["q"]
-    client = boto3.client('lex-runtime','us-east-1',aws_access_key_id="AKIAT7O6UYA33LA7NS4V",
-                            aws_secret_access_key="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",verify=False)
+    client = boto3.client('lex-runtime','us-east-1',verify=False)
     botresponse = client.post_text(
         botName='photo',
         botAlias='sarsa',
