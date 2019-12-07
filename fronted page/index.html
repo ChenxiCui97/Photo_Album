@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Photo-Hub an Photo Gallery Category Flat Bootstarp responsive Website Template| Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Photo-Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+    <script type="text/javascript" src="js/b2.js"></script>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <!--script src="js/require.js"></script-->
+	<!--script src="js/voice.js"></script-->	
+	<div class="header">	
+      <div class="container"> 
+  	     <div class="logo">
+			<h1><a href="index.html">Photo Album </a></h1>
+		 </div>
+		 <div class="top_right">
+		   <ul>
+			<li><a href="register.html">Register</a></li>|
+			<li class="login" >
+				 <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+					  <div id="loginBox">                
+						  <form id="loginForm">
+			                <fieldset id="body">
+			                	<fieldset>
+			                          <label for="email">Email Address</label>
+			                          <input type="text" name="email" id="email">
+			                    </fieldset>
+			                    <fieldset>
+			                            <label for="password">Password</label>
+			                            <input type="password" name="password" id="password">
+			                     </fieldset>
+			                    <input type="submit" id="login" value="Sign in">
+			                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+			            	</fieldset>
+			                 <span><a href="#">Forgot your password?</a></span>
+						   </form>
+				        </div>
+			      </div>
+			  </li>
+		   </ul>
+	     </div>
+		 <div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="container">
+			<div class="span_1_of_1">
+			    <h2>Beautiful and interesting photos here.<br>You can both search and upload!</h2>
+				<p id="white">You can type keywords to search or click the orange button to speak.</p>
+			    <div class="search">
+			      <ul class="nav1">
+		            <li id="search">
+						<form action="" method="get">
+							<input type="text" name="search_text" id="search_text" placeholder="Search"/>
+							<div>
+                                <a href="#" id="start_button" onclick="startDictation(event)">Speak</a>
+							</div>
+							<div id="results">
+							    <span id="final_span" class="final"></span>
+								<span id="interim_span" class="interim"></span>
+							</div>
+
+							<!--script type="text/javascript">
+
+							</script-->
+							<!--input type="button" name="start_button" id="start_button"-->
+							<!--input type="button" name="stop_button" id="stop_button" disabled="true"-->							
+                            <input type="button" name="search_button" id="search_button" onclick= "validateForm()">               
+						</form>
+	              </ul>
+				  <div>
+				    <!--p id="white">You can upload your photos here.</p-->
+				    <input type="file" name="myPic" id="uploadpic"><br><br>
+                    <button id="send" onclick="uploadpic()">upload</button>
+				  </div>
+				  
+				  <!--form style="display:none" action="https://t7l3px15nc.execute-api.us-east-2.amazonaws.com/hw3/photo/name=test.jpg" method="put" enctype="multipart/form-data">
+　　                <input type="file" name="file" value="">
+                  </form>
+                  <a href="javascript:;" class="import">Upload here</a>
+				  <script>
+                  $('.import').click(function(){
+　　              $(this).prev('form').find('[name="file"]').trigger('click');
+                  });
+
+                  // 当表单文件有变化时执行提交动作
+
+                  $('[name="file"]').change(function(){
+　　                 if($(this).val()){
+　　　　                $('.import').addClass('disabled' );
+　　　　                $(this).parent().submit();
+　　                   }
+                  });
+                </script-->
+	            </div>
+			</div>
+		</div>
+	</div>
+	<div class="grid_1" id="picgrid">
+		<h3>Find pictures you love here!</h3>
+		<!--div class="col-md-2 col_1">
+			<img src="images/g1.jpg" class="img-responsive" alt=""/>
+		</div-->
+		
+	</div>
+	<div class="grid_2">
+		<div class="container"> 
+			<div class="col-md-3 col_2">
+				<h3>Stock Photo<br>Categories</h3>
+			</div>
+			<div class="col-md-9 col_5">
+				<div class="col_1_of_5 span_1_of_5">
+					<ul class="list1">
+					    <li><a href="stock.html">Abstract</a></li>
+			            <li><a href="stock.html">Animals/Wildlife</a></li>
+			            <li><a href="stock.html">The Arts</a></li>
+			            <li><a href="stock.html">Backgrounds/Textures</a></li>
+			            <li><a href="stock.html">Beauty/Fashion</a></li>
+			            <li><a href="stock.html">Buildings/Landmarks</a></li>
+		            </ul>
+				</div>
+				<div class="col_1_of_5 span_1_of_5">
+					<ul class="list1">
+					    <li><a href="stock.html">Business/Finance</a></li>
+			            <li><a href="stock.html">Celebrities</a></li>
+			            <li><a href="stock.html">Editorial</a></li>
+			            <li><a href="stock.html">Education</a></li>
+			            <li><a href="stock.html">Food and Drink</a></li>
+			            <li><a href="stock.html">Healthcare/Medical</a></li>
+		            </ul>
+				</div>
+				<div class="col_1_of_5 span_1_of_5">
+					<ul class="list1">
+					    <li><a href="stock.html">Holidays</a></li>
+			            <li><a href="stock.html">Illustrations/Clip-Art</a></li>
+			            <li><a href="stock.html">Industrial</a></li>
+			            <li><a href="stock.html">Interiors</a></li>
+			            <li><a href="stock.html">Miscellaneous</a></li>
+			            <li><a href="stock.html">Model Released Only</a></li>
+		            </ul>
+				</div>
+				<div class="col_1_of_5 span_1_of_5">
+					<ul class="list1">
+					    <li><a href="stock.html">Nature</a></li>
+			            <li><a href="stock.html">Objects</a></li>
+			            <li><a href="stock.html">Parks/Outdoor</a></li>
+			            <li><a href="stock.html">People</a></li>
+			            <li><a href="stock.html">Religion</a></li>
+			            <li><a href="stock.html">Science</a></li>
+		            </ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="grid_3">
+	  <div class="container">
+	  	 <ul id="footer-links">
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Royalty Free License</a></li>
+			<li><a href="#">Extended License</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="support.html">Support</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="#">Categories</a></li>
+         </ul>
+         <p>Copyright © 2019 Photo-Album . All Rights Reserved.Design by Grace Feng </p>
+	  </div>
+	</div>
+	<!--script src="https://sdk.amazonaws.com/js/aws-sdk-2.580.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+	<script src="js/menu_jquery.js"></script>
+</body>
+</html>		
