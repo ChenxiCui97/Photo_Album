@@ -35,7 +35,7 @@ def lambda_handler(event, context):
     print(result)
     
     host = "vpc-myphotos-xoaohoqea74p5cdtwn7sklyzce.us-east-2.es.amazonaws.com"
-    awsauth = AWS4Auth("AKIAWAZYHXDAOKPRFHFB","4NWrOIRm069ufAmu8X+q7KmTHDhNa9w+6WkApGEw",'us-east-2','es')
+    awsauth = AWS4Auth()
 
     es = Elasticsearch(
         hosts=[{'host': host, 'port': 443}],
